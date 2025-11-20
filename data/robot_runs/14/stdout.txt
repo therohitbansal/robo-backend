@@ -1,0 +1,233 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initiate Customer Chat and Response from Agent side :: This test c... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Rohit Bansal added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Rohit Bansal added to the chat
+Verifying file received on Agent 2 side
+File received successfully on Agent 2 side
+Customer to Agent1 Chat is successfully done.
+| PASS |
+------------------------------------------------------------------------------
+Initiate Customer Chat and Call Response from Agent side :: This t... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+Initiate Customer Chat and Transfer chat to Agent2 :: This test ca... | FAIL |
+Element '//button[@id='frappe-login-button']' not visible after 10 seconds.
+------------------------------------------------------------------------------
+Initiate Customer Chat and Transfer chat to Agent2 and Call :: Thi... | FAIL |
+Element '//button[@id='frappe-login-button']' not visible after 10 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat and reply from Virtual Agent For Sofa :: Th... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+Initiate customer chat and reply from Virtual Agent For House :: T... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent regarding sofa clean and s... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Does the page contain expected text? True
+Expected text: Welcome to Clean Fanatics found in the page text: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| FAIL |
+Element '//textarea[@placeholder="Send a message..."]' not visible after 15 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent regarding house clean and ... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Does the page contain expected text? True
+Expected text: Welcome to Clean Fanatics found in the page text: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Expected text found from Virtual Agent
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| FAIL |
+Element '//textarea[@placeholder="Send a message..."]' not visible after 15 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent and ask directly to connec... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Does the page contain expected text? True
+Expected text: Welcome to Clean Fanatics found in the page text: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+| FAIL |
+Element '//textarea[@placeholder="Send a message..."]' not visible after 15 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent and click to button to con... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Does the page contain expected text? True
+Expected text: Welcome to Clean Fanatics found in the page text: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| FAIL |
+Element '//textarea[@placeholder="Send a message..."]' not visible after 15 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent and click to button to con... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Does the page contain expected text? True
+Expected text: Welcome to Clean Fanatics found in the page text: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| FAIL |
+Element '//textarea[@placeholder="Send a message..."]' not visible after 15 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent and click to button to con... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Does the page contain expected text? True
+Expected text: Welcome to Clean Fanatics found in the page text: Good Afternoon! Welcome to Clean Fanatics. How can I assist you today?
+Page Text Extracted: Priya added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Priya added to the chat
+| FAIL |
+Element '//textarea[@placeholder="Send a message..."]' not visible after 15 seconds.
+------------------------------------------------------------------------------
+Initiate Customer chat for homeal Virtual Agent and confirm where ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate Customer chat for homeal Virtual Agent and confirm where ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Priya added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Priya added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and use call customer support fe... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and click on connect real agent ... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Priya added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Priya added to the chat
+Page Text Extracted: Priya added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Priya added to the chat
+| FAIL |
+Keyword 'Click Element' failed after retrying 5 times. The last error was: Element with locator '//div[@id="call-notification-accept-button"]' not found.
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and click on connect real agent ... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| FAIL |
+Element '//div[@class="ant-notification-notice-description"]' not visible after 15 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and asn to connect real agent an... | FAIL |
+Element '//button[@id='frappe-login-button']' not visible after 10 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and asn to connect real agent an... | FAIL |
+Element '//button[@id='frappe-login-button']' not visible after 10 seconds.
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+25 tests, 10 passed, 15 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/14/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/14/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/14/report.html

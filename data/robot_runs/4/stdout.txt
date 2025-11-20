@@ -1,0 +1,24 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+3 tests, 0 passed, 3 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/4/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/4/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/4/report.html

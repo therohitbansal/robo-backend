@@ -1,0 +1,31 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| FAIL |
+Element '//div[text()="Chat session has ended!"]' not visible after 10 seconds.
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+3 tests, 2 passed, 1 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/3/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/3/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/3/report.html

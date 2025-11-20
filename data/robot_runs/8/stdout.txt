@@ -1,0 +1,71 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+ElementClickInterceptedException: Message: element click intercepted: Element <button id="sample-app-server-add-button" type="button" class="ant-btn css-1vr7spz ant-btn-text ant-btn-lg" style="font-size: 13px;">...</button> is not clickable at point (1776, 170). Other element would receive the click: <div class="ant-row ant-row-center home-container css-1vr7spz" style="margin-left: -12px; margin-right: -12px;">...</div>
+  (Session info: chrome=142.0.7444.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+#0 0x5f44f1494aca <unknown>
+#1 0x5f44f0ee0cdb <unknown>
+#2 0x5f44f0f3a5ac <unknown>
+#3 0x5f44f0f38402 <unknown>
+#4 0x5f44f0f35a92 <unknown>
+#5 0x5f44f0f3512f <unknown>
+#6 0x5f44f0f27df1 <unknown>
+#7 0x5f44f0f27387 <unknown>
+#8 0x5f44f0f7fc87 <unknown>
+#9 0x5f44f0f25aca <unknown>
+#10 0x5f44f0f267d1 <unknown>
+#11 0x5f44f145ba99 <unknown>
+#12 0x5f44f145ea6c <unknown>
+#13 0x5f44f1444d29 <unknown>
+#14 0x5f44f145f665 <unknown>
+#15 0x5f44f142c6a3 <unknown>
+#16 0x5f44f14817b8 <unknown>
+#17 0x5f44f1481993 <unknown>
+#18 0x5f44f1493a63 <unknown>
+#19 0x76f19de9caa4 <unknown>
+#20 0x76f19df29c6c <unknown>
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+InvalidElementStateException: Message: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5d522a08aaca <unknown>
+#1 0x5d5229ad6cdb <unknown>
+#2 0x5d5229addb96 <unknown>
+#3 0x5d5229ae0313 <unknown>
+#4 0x5d5229ae03e3 <unknown>
+#5 0x5d5229b20674 <unknown>
+#6 0x5d5229b1d387 <unknown>
+#7 0x5d5229b75c87 <unknown>
+#8 0x5d5229b1baca <unknown>
+#9 0x5d5229b1c7d1 <unknown>
+#10 0x5d522a051a99 <unknown>
+#11 0x5d522a054a6c <unknown>
+#12 0x5d522a03ad29 <unknown>
+#13 0x5d522a055665 <unknown>
+#14 0x5d522a0226a3 <unknown>
+#15 0x5d522a0777b8 <unknown>
+#16 0x5d522a077993 <unknown>
+#17 0x5d522a089a63 <unknown>
+#18 0x7afc6209caa4 <unknown>
+#19 0x7afc62129c6c <unknown>
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/8/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/8/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/8/report.html

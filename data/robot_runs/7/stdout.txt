@@ -1,0 +1,51 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+ElementClickInterceptedException: Message: element click intercepted: Element <button id="sample-app-server-add-button" type="button" class="ant-btn css-1vr7spz ant-btn-text ant-btn-lg" style="font-size: 13px;">...</button> is not clickable at point (1776, 171). Other element would receive the click: <div class="ant-row ant-row-center home-container css-1vr7spz" style="margin-left: -12px; margin-right: -12px;">...</div>
+  (Session info: chrome=142.0.7444.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+#0 0x60bd6c0e1aca <unknown>
+#1 0x60bd6bb2dcdb <unknown>
+#2 0x60bd6bb875ac <unknown>
+#3 0x60bd6bb85402 <unknown>
+#4 0x60bd6bb82a92 <unknown>
+#5 0x60bd6bb8212f <unknown>
+#6 0x60bd6bb74a0b <unknown>
+#7 0x60bd6bb74387 <unknown>
+#8 0x60bd6bbccc87 <unknown>
+#9 0x60bd6bb72aca <unknown>
+#10 0x60bd6bb737d1 <unknown>
+#11 0x60bd6c0a8a99 <unknown>
+#12 0x60bd6c0aba6c <unknown>
+#13 0x60bd6c091d29 <unknown>
+#14 0x60bd6c0ac665 <unknown>
+#15 0x60bd6c0796a3 <unknown>
+#16 0x60bd6c0ce7b8 <unknown>
+#17 0x60bd6c0ce993 <unknown>
+#18 0x60bd6c0e0a63 <unknown>
+#19 0x739f5149caa4 <unknown>
+#20 0x739f51529c6c <unknown>
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+3 tests, 2 passed, 1 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/7/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/7/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/7/report.html

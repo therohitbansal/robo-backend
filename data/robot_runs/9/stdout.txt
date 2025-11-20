@@ -1,0 +1,42 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca <unknown>
+#1 0x5ba3694bdcdb <unknown>
+#2 0x5ba369492410 <unknown>
+#3 0x5ba36953eae8 <unknown>
+#4 0x5ba36955c6a5 <unknown>
+#5 0x5ba369502aca <unknown>
+#6 0x5ba3695037d1 <unknown>
+#7 0x5ba369a38a99 <unknown>
+#8 0x5ba369a3ba6c <unknown>
+#9 0x5ba369a21d29 <unknown>
+#10 0x5ba369a3c665 <unknown>
+#11 0x5ba369a096a3 <unknown>
+#12 0x5ba369a5e7b8 <unknown>
+#13 0x5ba369a5e993 <unknown>
+#14 0x5ba369a70a63 <unknown>
+#15 0x77bc3249caa4 <unknown>
+#16 0x77bc32529c6c <unknown>
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+Execution terminated by signal
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+3 tests, 0 passed, 3 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/9/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/9/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/9/report.html

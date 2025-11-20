@@ -1,0 +1,69 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+ElementClickInterceptedException: Message: element click intercepted: Element <button id="sample-app-server-add-button" type="button" class="ant-btn css-1vr7spz ant-btn-text ant-btn-lg" style="font-size: 13px;">...</button> is not clickable at point (1776, 171). Other element would receive the click: <div class="ant-row ant-row-center home-container css-1vr7spz" style="margin-left: -12px; margin-right: -12px;">...</div>
+  (Session info: chrome=142.0.7444.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+#0 0x5b9fc75caaca <unknown>
+#1 0x5b9fc7016cdb <unknown>
+#2 0x5b9fc70705ac <unknown>
+#3 0x5b9fc706e402 <unknown>
+#4 0x5b9fc706ba92 <unknown>
+#5 0x5b9fc706b12f <unknown>
+#6 0x5b9fc705da0b <unknown>
+#7 0x5b9fc705d387 <unknown>
+#8 0x5b9fc70b5c87 <unknown>
+#9 0x5b9fc705baca <unknown>
+#10 0x5b9fc705c7d1 <unknown>
+#11 0x5b9fc7591a99 <unknown>
+#12 0x5b9fc7594a6c <unknown>
+#13 0x5b9fc757ad29 <unknown>
+#14 0x5b9fc7595665 <unknown>
+#15 0x5b9fc75626a3 <unknown>
+#16 0x5b9fc75b77b8 <unknown>
+#17 0x5b9fc75b7993 <unknown>
+#18 0x5b9fc75c9a63 <unknown>
+#19 0x712a09a9caa4 <unknown>
+#20 0x712a09b29c6c <unknown>
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=142.0.7444.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+#0 0x595f11f45aca <unknown>
+#1 0x595f11991b08 <unknown>
+#2 0x595f119e591e <unknown>
+#3 0x595f119d8a0b <unknown>
+#4 0x595f119d8387 <unknown>
+#5 0x595f11a30c87 <unknown>
+#6 0x595f119d6aca <unknown>
+#7 0x595f119d77d1 <unknown>
+#8 0x595f11f0ca99 <unknown>
+#9 0x595f11f0fa6c <unknown>
+#10 0x595f11ef5d29 <unknown>
+#11 0x595f11f10665 <unknown>
+#12 0x595f11edd6a3 <unknown>
+#13 0x595f11f327b8 <unknown>
+#14 0x595f11f32993 <unknown>
+#15 0x595f11f44a63 <unknown>
+#16 0x76d7c029caa4 <unknown>
+#17 0x76d7c0329c6c <unknown>
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| PASS |
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/10/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/10/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/10/report.html

@@ -1,0 +1,105 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initiate Customer chat for homeal Virtual Agent and confirm where ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate Customer chat for homeal Virtual Agent and confirm where ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Priya added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Priya added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and use call customer support fe... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and click on connect real agent ... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+Checking if the iframe is present
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and click on connect real agent ... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+Page Text Extracted: Reena added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Reena added to the chat
+Checking if the iframe is present
+Agent 2 has hung up the call
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and asn to connect real agent an... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+Checking if the iframe is present
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and asn to connect real agent an... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+Checking if the iframe is present
+Agent 2 has hung up the call
+| PASS |
+------------------------------------------------------------------------------
+37.Customer chat                                                      | PASS |
+10 tests, 10 passed, 0 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/1/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/1/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/1/report.html

@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-11-06T12:53:31.165429" rpa="false" schemaversion="5">
+<suite id="s1" name="37.Customer chat" source="/home/rohitbansal/dvc_client_tests/DolphinVC/TestCases/WeBTestCases/37.Customer_chat.robot">
+<test id="s1-t1" name="Initite customer chat for homeal and raise a complaint regarding order not received" line="94">
+<kw name="Initiate customer chat for homeal and raise a complaint regarding order not received" owner="Customer_To_Agent_Chat">
+<kw name="start homeal chat" owner="Customer_To_Agent_Chat">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-06T12:53:33.827509" level="INFO">${AGENT_BROWSERS} = []</msg>
+<var>${AGENT_BROWSERS}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-06T12:53:33.827159" elapsed="0.000429"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:53:33.828869" level="INFO">${AGENT_BROWSERS} = []</msg>
+<arg>${AGENT_BROWSERS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:53:33.828419" elapsed="0.000572"/>
+</kw>
+<kw name="Initiate customer chat" owner="Customer_To_Agent_Chat">
+<kw name="Start TestCase" owner="common_login">
+<kw name="options_prop" owner="importfile">
+<msg time="2025-11-06T12:53:33.834663" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2025-11-06T12:53:33.946581" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:53:34.061181" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:53:34.190604" level="INFO">Driver [/home/rohitbansal/.wdm/drivers/chromedriver/linux64/142.0.7444.61/chromedriver-linux64/chromedriver] found in cache</msg>
+<msg time="2025-11-06T12:53:34.191519" level="INFO">${opt} = &lt;selenium.webdriver.chrome.options.Options object at 0x7b92c3a23ef0&gt;</msg>
+<msg time="2025-11-06T12:53:34.191686" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x7b92c5f17a70&gt;</msg>
+<var>${opt}</var>
+<var>${service}</var>
+<status status="PASS" start="2025-11-06T12:53:33.833480" elapsed="0.358293"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:34.195181" level="INFO">Opening browser 'Chrome' to base url 'https://dev.sample-server.nouveau-labs.in/'.</msg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T12:53:34.194273" elapsed="2.581390"/>
+</kw>
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<arg>ELSE IF</arg>
+<arg>'${BROWSER}'=='edge'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--use-fake-ui-for-media-stream");add_argument("--use-fake-device-for-media-stream")</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=set_preference("media.navigator.permission.disabled", True)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-06T12:53:34.193179" elapsed="2.583395"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:53:36.777592" elapsed="0.259236"/>
+</kw>
+<arg>${Customer_URL}</arg>
+<status status="PASS" start="2025-11-06T12:53:33.831982" elapsed="3.206090"/>
+</kw>
+<kw name="Get Browser Ids" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:37.040414" level="INFO">${Customer_browsers} = [1]</msg>
+<var>${Customer_browsers}</var>
+<doc>Returns index of all active browser as list.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.039634" elapsed="0.000914"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Browsers: ${Customer_browsers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.042131" elapsed="0.000862"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:53:37.045195" level="INFO">${C_Browser1} = 1</msg>
+<var>${C_Browser1}</var>
+<arg>${Customer_browsers}[-1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.044264" elapsed="0.001071"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:53:37.048884" level="INFO">${C_Browser1} = 1</msg>
+<arg>${C_Browser1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.047135" elapsed="0.002050"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Customer Browser ID: ${C_Browser1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.051085" elapsed="0.001182"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${AGENT_BROWSERS}</arg>
+<arg>${C_Browser1}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.053577" elapsed="0.001012"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.055930" elapsed="0.023061"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:37.083260" level="INFO">Clicking element '//input[@id="sample-app-server-dropdown"]'.</msg>
+<arg>${Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.080902" elapsed="0.425319"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Enter_Server_URL}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.508033" elapsed="0.321583"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:37.832076" level="INFO">Typing text 'https://callsphere.evolvecx.nouveau-labs.in' into text field '//input[@id="sample-app-server-input-box"]'.</msg>
+<arg>${Enter_Server_URL}</arg>
+<arg>${Input_Server_URL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:37.830989" elapsed="0.484713"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:38.317574" level="INFO">Clicking element '//button[@id="sample-app-server-add-button"]'.</msg>
+<arg>${Add_Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:38.316960" elapsed="0.154949"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:38.474157" level="INFO">Clicking element '//input[@id="sample-app-chat-virtual-agent-dropdown"]'.</msg>
+<arg>${Virtual_chat_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:38.473318" elapsed="0.203795"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Virtual_chat_box_input}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:53:38.678572" elapsed="0.298227"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:38.979174" level="INFO">Typing text 'homeal@support.com' into text field '//input[@id="sample-app-chat-virtual-agent-input-box"]'.</msg>
+<arg>${Virtual_chat_box_input}</arg>
+<arg>${chat_agent}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:38.978012" elapsed="0.384465"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:39.368601" level="INFO">Clicking element '//button[@id="sample-app-chat-virtual-agent-add-button"]'.</msg>
+<arg>${Add_Virtual_Chat_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:39.366586" elapsed="0.389780"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:39.761063" level="INFO">Clicking element '//button[@id="sample-app-chat-button"]'.</msg>
+<arg>${Initiate_chat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:39.759615" elapsed="0.495866"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:40.284547" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</msg>
+<msg time="2025-11-06T12:53:40.285686" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</msg>
+<arg>${Full_name}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-06T12:53:40.256475" elapsed="0.034789">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Full_name}</arg>
+<arg>${Customer_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.292627" elapsed="0.000244"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Customer_mail_add}</arg>
+<arg>${Customer_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.293628" elapsed="0.000216"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Mobile_number}</arg>
+<arg>${globalp_cust_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.294526" elapsed="0.000171"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.295358" elapsed="0.000161"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_1}</arg>
+<arg>6</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.296349" elapsed="0.000198"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_2}</arg>
+<arg>3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.297297" elapsed="0.000168"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_3}</arg>
+<arg>7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.298219" elapsed="0.000197"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_4}</arg>
+<arg>9</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.299680" elapsed="0.000424"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.301267" elapsed="0.000458"/>
+</kw>
+<arg>${Input_Virtual_Chat_Agent}</arg>
+<status status="FAIL" start="2025-11-06T12:53:33.829940" elapsed="6.472718">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${verification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:40.303477" elapsed="0.000181"/>
+</kw>
+<kw name="Check Text On ChatPage" owner="Customer_To_Agent_Chat">
+<arg>${expected_text}</arg>
+<arg>${start_chat_text_path}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:40.304579" elapsed="0.000183"/>
+</kw>
+<status status="FAIL" start="2025-11-06T12:53:33.824547" elapsed="6.480751">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<arg>${btn_complaint}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:40.306052" elapsed="0.000185"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<arg>${order_status_complaint}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:40.306941" elapsed="0.000166"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<arg>${btn_no}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:40.307778" elapsed="0.000158"/>
+</kw>
+<kw name="Verify chat ended" owner="Customer_To_Agent_Chat">
+<status status="NOT RUN" start="2025-11-06T12:53:40.308935" elapsed="0.000169"/>
+</kw>
+<kw name="End Chat from Customer Side" owner="Customer_To_Agent_Chat">
+<arg>0</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:40.309832" elapsed="0.000169"/>
+</kw>
+<status status="FAIL" start="2025-11-06T12:53:33.823711" elapsed="6.486846">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-06T12:53:40.311596" elapsed="0.118683"/>
+</kw>
+<doc>This test case is to initiate a chat from the customer side to virtual agent for homeal and raise a complaint regarding order not received</doc>
+<tag>18</tag>
+<tag>CVACHAT_18</tag>
+<tag>homeal</tag>
+<tag>new</tag>
+<status status="FAIL" start="2025-11-06T12:53:33.819334" elapsed="6.611409">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t2" name="Initiate customer chat for homeal and raise a complaint regarding paid but order not placed" line="99">
+<kw name="Initiate customer chat for homeal and raise a complaint regarding paid but order not placed" owner="Customer_To_Agent_Chat">
+<kw name="start homeal chat" owner="Customer_To_Agent_Chat">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-06T12:53:40.584943" level="INFO">${AGENT_BROWSERS} = []</msg>
+<var>${AGENT_BROWSERS}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-06T12:53:40.583819" elapsed="0.001197"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:53:40.586448" level="INFO">${AGENT_BROWSERS} = []</msg>
+<arg>${AGENT_BROWSERS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:53:40.585907" elapsed="0.000698"/>
+</kw>
+<kw name="Initiate customer chat" owner="Customer_To_Agent_Chat">
+<kw name="Start TestCase" owner="common_login">
+<kw name="options_prop" owner="importfile">
+<msg time="2025-11-06T12:53:40.590028" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2025-11-06T12:53:40.747052" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:53:40.868904" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:53:41.037959" level="INFO">Driver [/home/rohitbansal/.wdm/drivers/chromedriver/linux64/142.0.7444.61/chromedriver-linux64/chromedriver] found in cache</msg>
+<msg time="2025-11-06T12:53:41.038469" level="INFO">${opt} = &lt;selenium.webdriver.chrome.options.Options object at 0x7b92c394da30&gt;</msg>
+<msg time="2025-11-06T12:53:41.038610" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x7b92c39e33b0&gt;</msg>
+<var>${opt}</var>
+<var>${service}</var>
+<status status="PASS" start="2025-11-06T12:53:40.589548" elapsed="0.449163"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:41.041560" level="INFO">Opening browser 'Chrome' to base url 'https://dev.sample-server.nouveau-labs.in/'.</msg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T12:53:41.040814" elapsed="2.639043"/>
+</kw>
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<arg>ELSE IF</arg>
+<arg>'${BROWSER}'=='edge'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--use-fake-ui-for-media-stream");add_argument("--use-fake-device-for-media-stream")</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=set_preference("media.navigator.permission.disabled", True)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-06T12:53:41.039788" elapsed="2.642314"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:53:43.683967" elapsed="0.408314"/>
+</kw>
+<arg>${Customer_URL}</arg>
+<status status="PASS" start="2025-11-06T12:53:40.588811" elapsed="3.504557"/>
+</kw>
+<kw name="Get Browser Ids" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:44.096172" level="INFO">${Customer_browsers} = [1]</msg>
+<var>${Customer_browsers}</var>
+<doc>Returns index of all active browser as list.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.094908" elapsed="0.001579"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Browsers: ${Customer_browsers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.101777" elapsed="0.001164"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:53:44.106891" level="INFO">${C_Browser1} = 1</msg>
+<var>${C_Browser1}</var>
+<arg>${Customer_browsers}[-1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.104521" elapsed="0.002566"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:53:44.110562" level="INFO">${C_Browser1} = 1</msg>
+<arg>${C_Browser1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.109144" elapsed="0.001756"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Customer Browser ID: ${C_Browser1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.113331" elapsed="0.001779"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${AGENT_BROWSERS}</arg>
+<arg>${C_Browser1}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.116500" elapsed="0.001470"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.119324" elapsed="0.018597"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:44.140694" level="INFO">Clicking element '//input[@id="sample-app-server-dropdown"]'.</msg>
+<arg>${Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.139159" elapsed="0.546736"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Enter_Server_URL}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.688244" elapsed="0.059215"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:44.750552" level="INFO">Typing text 'https://callsphere.evolvecx.nouveau-labs.in' into text field '//input[@id="sample-app-server-input-box"]'.</msg>
+<arg>${Enter_Server_URL}</arg>
+<arg>${Input_Server_URL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:44.749520" elapsed="0.543516"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:45.294625" level="INFO">Clicking element '//button[@id="sample-app-server-add-button"]'.</msg>
+<arg>${Add_Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:45.294129" elapsed="0.267327"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:45.565159" level="INFO">Clicking element '//input[@id="sample-app-chat-virtual-agent-dropdown"]'.</msg>
+<arg>${Virtual_chat_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:53:45.563825" elapsed="0.248901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Virtual_chat_box_input}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:53:45.815050" elapsed="0.063984"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:53:45.881568" level="INFO">Typing text 'homeal@support.com' into text field '//input[@id="sample-app-chat-virtual-agent-input-box"]'.</msg>
+<msg time="2025-11-06T12:53:46.107114" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot</msg>
+<msg time="2025-11-06T12:53:46.110282" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d18f20&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot</msg>
+<msg time="2025-11-06T12:53:46.113179" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d191c0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot</msg>
+<msg time="2025-11-06T12:53:46.116972" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=52427): Max retries exceeded with url: /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d18f80&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<arg>${Virtual_chat_box_input}</arg>
+<arg>${chat_agent}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-06T12:53:45.880585" elapsed="0.237112">Execution terminated by signal</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Add_Virtual_Chat_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.120282" elapsed="0.000393"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Initiate_chat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.122187" elapsed="0.000337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Full_name}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.124067" elapsed="0.000404"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Full_name}</arg>
+<arg>${Customer_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.125785" elapsed="0.000342"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Customer_mail_add}</arg>
+<arg>${Customer_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.127574" elapsed="0.000367"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Mobile_number}</arg>
+<arg>${globalp_cust_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.129406" elapsed="0.000608"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.133962" elapsed="0.000369"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_1}</arg>
+<arg>6</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.135939" elapsed="0.000459"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_2}</arg>
+<arg>3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.137808" elapsed="0.000480"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_3}</arg>
+<arg>7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.139796" elapsed="0.000490"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${otp_4}</arg>
+<arg>9</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.149315" elapsed="0.000523"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.151356" elapsed="0.000413"/>
+</kw>
+<arg>${Input_Virtual_Chat_Agent}</arg>
+<status status="FAIL" start="2025-11-06T12:53:40.587923" elapsed="5.564865">Execution terminated by signal</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${verification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-11-06T12:53:46.154210" elapsed="0.000323"/>
+</kw>
+<kw name="Check Text On ChatPage" owner="Customer_To_Agent_Chat">
+<arg>${expected_text}</arg>
+<arg>${start_chat_text_path}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:46.156101" elapsed="0.000319"/>
+</kw>
+<status status="FAIL" start="2025-11-06T12:53:40.581579" elapsed="5.575789">Execution terminated by signal</status>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<arg>${btn_complaint}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:46.158797" elapsed="0.000381"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<arg>${paid_but_order_not_placed_complaint}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:46.160456" elapsed="0.000366"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<arg>${btn_no}</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:46.162109" elapsed="0.000370"/>
+</kw>
+<kw name="Verify chat ended" owner="Customer_To_Agent_Chat">
+<status status="NOT RUN" start="2025-11-06T12:53:46.164376" elapsed="0.000451"/>
+</kw>
+<kw name="End Chat from Customer Side" owner="Customer_To_Agent_Chat">
+<arg>0</arg>
+<status status="NOT RUN" start="2025-11-06T12:53:46.166344" elapsed="0.000394"/>
+</kw>
+<status status="FAIL" start="2025-11-06T12:53:40.580346" elapsed="5.587657">Execution terminated by signal</status>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-11-06T12:53:46.177339" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d53470&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f</msg>
+<msg time="2025-11-06T12:53:46.179598" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c394eba0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f</msg>
+<msg time="2025-11-06T12:53:46.182242" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c394eab0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f</msg>
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-06T12:53:46.172914" elapsed="0.012086"/>
+</kw>
+<doc>This test case is to initiate a chat from the customer side to virtual agent for homeal and raise a complaint regarding paid but order not placed</doc>
+<tag>19</tag>
+<tag>CVACHAT_19</tag>
+<tag>homeal</tag>
+<tag>new</tag>
+<status status="FAIL" start="2025-11-06T12:53:40.578202" elapsed="5.608478">Execution terminated by signal</status>
+</test>
+<test id="s1-t3" name="Initiate customer chat for homeal and raise a complaint regarding subscription issue" line="104">
+<doc>This test case is to initiate a chat from the customer side to virtual agent for homeal and raise a complaint regarding subscription issue</doc>
+<tag>20</tag>
+<tag>CVACHAT_20</tag>
+<tag>homeal</tag>
+<tag>new</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-06T12:53:46.426365" elapsed="0.001005">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2025-11-06T12:53:31.295530" elapsed="15.267981"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="0" fail="2" skip="0">NOT robot:exit</stat>
+<stat pass="0" fail="1" skip="0">18</stat>
+<stat pass="0" fail="1" skip="0">19</stat>
+<stat pass="0" fail="1" skip="0">20</stat>
+<stat pass="0" fail="1" skip="0">CVACHAT_18</stat>
+<stat pass="0" fail="1" skip="0">CVACHAT_19</stat>
+<stat pass="0" fail="1" skip="0">CVACHAT_20</stat>
+<stat pass="0" fail="3" skip="0">homeal</stat>
+<stat pass="0" fail="3" skip="0">new</stat>
+</tag>
+<suite>
+<stat name="37.Customer chat" id="s1" pass="0" fail="3" skip="0">37.Customer chat</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-06T12:53:40.284547" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=142.0.7444.59)
+Stacktrace:
+#0 0x5ba369a71aca &lt;unknown&gt;
+#1 0x5ba3694bdcdb &lt;unknown&gt;
+#2 0x5ba369492410 &lt;unknown&gt;
+#3 0x5ba36953eae8 &lt;unknown&gt;
+#4 0x5ba36955c6a5 &lt;unknown&gt;
+#5 0x5ba369502aca &lt;unknown&gt;
+#6 0x5ba3695037d1 &lt;unknown&gt;
+#7 0x5ba369a38a99 &lt;unknown&gt;
+#8 0x5ba369a3ba6c &lt;unknown&gt;
+#9 0x5ba369a21d29 &lt;unknown&gt;
+#10 0x5ba369a3c665 &lt;unknown&gt;
+#11 0x5ba369a096a3 &lt;unknown&gt;
+#12 0x5ba369a5e7b8 &lt;unknown&gt;
+#13 0x5ba369a5e993 &lt;unknown&gt;
+#14 0x5ba369a70a63 &lt;unknown&gt;
+#15 0x77bc3249caa4 &lt;unknown&gt;
+#16 0x77bc32529c6c &lt;unknown&gt;
+</msg>
+<msg time="2025-11-06T12:53:46.107114" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot</msg>
+<msg time="2025-11-06T12:53:46.110282" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d18f20&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot</msg>
+<msg time="2025-11-06T12:53:46.113179" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d191c0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot</msg>
+<msg time="2025-11-06T12:53:46.116972" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=52427): Max retries exceeded with url: /session/b51bd3e579dc19fe83c7d0351468c75f/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d18f80&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))</msg>
+<msg time="2025-11-06T12:53:46.177339" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c0d53470&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f</msg>
+<msg time="2025-11-06T12:53:46.179598" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c394eba0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f</msg>
+<msg time="2025-11-06T12:53:46.182242" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7b92c394eab0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b51bd3e579dc19fe83c7d0351468c75f</msg>
+</errors>
+</robot>

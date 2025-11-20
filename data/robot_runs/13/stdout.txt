@@ -1,0 +1,59 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initiate Customer Chat and Response from Agent side :: This test c... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Rohit Bansal added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Rohit Bansal added to the chat
+Verifying file received on Agent 2 side
+File received successfully on Agent 2 side
+Customer to Agent1 Chat is successfully done.
+| PASS |
+------------------------------------------------------------------------------
+Initiate Customer Chat and Call Response from Agent side :: This t... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+Page Text Extracted: Rohit Bansal added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Rohit Bansal added to the chat
+Verifying file received on Agent 2 side
+File received successfully on Agent 2 side
+Checking if the iframe is present
+Customer to Agent1 Chat is successfully done.
+| PASS |
+------------------------------------------------------------------------------
+Initiate Customer Chat and Transfer chat to Agent2 :: This test ca... Agent: Rohit Bansal, Browser ID: 1
+Agent: The Rohit, Browser ID: 2
+Current Browsers: [1, 2, 3]
+Current Customer Browser ID: 3
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+Initiate Customer Chat and Transfer chat to Agent2 and Call :: Thi... | FAIL |
+Element '//button[@id='frappe-login-button']' not visible after 10 seconds.
+------------------------------------------------------------------------------
+Initiate customer chat and reply from Virtual Agent For Sofa :: Th... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+Page should have contained text 'Welcome. Please wait while we connect with an agent.' but did not.
+------------------------------------------------------------------------------
+Initiate customer chat and reply from Virtual Agent For House :: T... | FAIL |
+Execution terminated by signal
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent regarding sofa clean and s... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent regarding house clean and ... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent and ask directly to connec... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent and click to button to con... | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Initiate customer chat to virtual agent and click to button to con... 

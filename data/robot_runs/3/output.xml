@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-11-06T12:15:49.027714" rpa="false" schemaversion="5">
+<suite id="s1" name="37.Customer chat" source="/home/rohitbansal/dvc_client_tests/DolphinVC/TestCases/WeBTestCases/37.Customer_chat.robot">
+<test id="s1-t1" name="Initite customer chat for homeal and raise a complaint regarding order not received" line="94">
+<kw name="Initiate customer chat for homeal and raise a complaint regarding order not received" owner="Customer_To_Agent_Chat">
+<kw name="start homeal chat" owner="Customer_To_Agent_Chat">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-06T12:15:51.464107" level="INFO">${AGENT_BROWSERS} = []</msg>
+<var>${AGENT_BROWSERS}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-06T12:15:51.463734" elapsed="0.000457"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:15:51.465587" level="INFO">${AGENT_BROWSERS} = []</msg>
+<arg>${AGENT_BROWSERS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:15:51.465088" elapsed="0.000648"/>
+</kw>
+<kw name="Initiate customer chat" owner="Customer_To_Agent_Chat">
+<kw name="Start TestCase" owner="common_login">
+<kw name="options_prop" owner="importfile">
+<msg time="2025-11-06T12:15:51.469046" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2025-11-06T12:15:51.572705" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:15:51.727314" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:15:51.877092" level="INFO">Driver [/home/rohitbansal/.wdm/drivers/chromedriver/linux64/142.0.7444.61/chromedriver-linux64/chromedriver] found in cache</msg>
+<msg time="2025-11-06T12:15:51.877703" level="INFO">${opt} = &lt;selenium.webdriver.chrome.options.Options object at 0x7c0dad31fd40&gt;</msg>
+<msg time="2025-11-06T12:15:51.877833" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x7c0dad639fa0&gt;</msg>
+<var>${opt}</var>
+<var>${service}</var>
+<status status="PASS" start="2025-11-06T12:15:51.468540" elapsed="0.409357"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:51.880205" level="INFO">Opening browser 'Chrome' to base url 'https://dev.sample-server.nouveau-labs.in/'.</msg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T12:15:51.879554" elapsed="2.583791"/>
+</kw>
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<arg>ELSE IF</arg>
+<arg>'${BROWSER}'=='edge'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--use-fake-ui-for-media-stream");add_argument("--use-fake-device-for-media-stream")</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=set_preference("media.navigator.permission.disabled", True)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-06T12:15:51.878801" elapsed="2.585329"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.464949" elapsed="0.238026"/>
+</kw>
+<arg>${Customer_URL}</arg>
+<status status="PASS" start="2025-11-06T12:15:51.467817" elapsed="3.235796"/>
+</kw>
+<kw name="Get Browser Ids" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:54.705226" level="INFO">${Customer_browsers} = [1]</msg>
+<var>${Customer_browsers}</var>
+<doc>Returns index of all active browser as list.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.704525" elapsed="0.000818"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Browsers: ${Customer_browsers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.706697" elapsed="0.001816"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:15:54.710171" level="INFO">${C_Browser1} = 1</msg>
+<var>${C_Browser1}</var>
+<arg>${Customer_browsers}[-1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.709444" elapsed="0.000808"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:15:54.712338" level="INFO">${C_Browser1} = 1</msg>
+<arg>${C_Browser1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.711427" elapsed="0.001106"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Customer Browser ID: ${C_Browser1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.715873" elapsed="0.001391"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${AGENT_BROWSERS}</arg>
+<arg>${C_Browser1}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.718166" elapsed="0.000708"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.719774" elapsed="0.009350"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:54.730590" level="INFO">Clicking element '//input[@id="sample-app-server-dropdown"]'.</msg>
+<arg>${Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:54.729802" elapsed="0.320314"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Enter_Server_URL}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:15:55.052077" elapsed="0.075921"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:55.130082" level="INFO">Typing text 'https://callsphere.evolvecx.nouveau-labs.in' into text field '//input[@id="sample-app-server-input-box"]'.</msg>
+<arg>${Enter_Server_URL}</arg>
+<arg>${Input_Server_URL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:55.129124" elapsed="0.479164"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:55.609966" level="INFO">Clicking element '//button[@id="sample-app-server-add-button"]'.</msg>
+<arg>${Add_Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:55.609349" elapsed="0.199570"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:55.811838" level="INFO">Clicking element '//input[@id="sample-app-chat-virtual-agent-dropdown"]'.</msg>
+<arg>${Virtual_chat_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:55.810785" elapsed="0.213075"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Virtual_chat_box_input}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:15:56.025746" elapsed="0.295151"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:56.323050" level="INFO">Typing text 'homeal@support.com' into text field '//input[@id="sample-app-chat-virtual-agent-input-box"]'.</msg>
+<arg>${Virtual_chat_box_input}</arg>
+<arg>${chat_agent}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:56.322011" elapsed="0.304848"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:56.628554" level="INFO">Clicking element '//button[@id="sample-app-chat-virtual-agent-add-button"]'.</msg>
+<arg>${Add_Virtual_Chat_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:56.627966" elapsed="0.195915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:56.827619" level="INFO">Clicking element '//button[@id="sample-app-chat-button"]'.</msg>
+<arg>${Initiate_chat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:56.826659" elapsed="0.537253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Full_name}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:15:57.366082" elapsed="0.393103"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:57.762267" level="INFO">Typing text 'DolphinCX Customer' into text field '//input[@id="full_name"]'.</msg>
+<arg>${Full_name}</arg>
+<arg>${Customer_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:57.760859" elapsed="0.601754"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:58.365114" level="INFO">Typing text 'dolphincx@cus.com' into text field '//input[@id="email"]'.</msg>
+<arg>${Customer_mail_add}</arg>
+<arg>${Customer_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:58.364064" elapsed="0.321996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:58.688226" level="INFO">Typing text '9944776655' into text field '//input[@placeholder="Mobile Number"]'.</msg>
+<arg>${Mobile_number}</arg>
+<arg>${globalp_cust_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:58.687335" elapsed="0.407567"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:59.097973" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<arg>${Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:59.096983" elapsed="0.385098"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:59.484849" level="INFO">Typing text '6' into text field '//input[@aria-label="Please enter OTP character 1"]'.</msg>
+<arg>${otp_1}</arg>
+<arg>6</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:59.483408" elapsed="0.153307"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:59.639358" level="INFO">Typing text '3' into text field '//input[@aria-label="Please enter OTP character 2"]'.</msg>
+<arg>${otp_2}</arg>
+<arg>3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:59.638099" elapsed="0.149850"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:59.791293" level="INFO">Typing text '7' into text field '//input[@aria-label="Please enter OTP character 3"]'.</msg>
+<arg>${otp_3}</arg>
+<arg>7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:59.790195" elapsed="0.167919"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:15:59.963666" level="INFO">Typing text '9' into text field '//input[@aria-label="Please enter OTP character 4"]'.</msg>
+<arg>${otp_4}</arg>
+<arg>9</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:15:59.961718" elapsed="0.279040"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T12:16:08.244199" level="INFO">Slept 8 seconds.</msg>
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T12:16:00.242899" elapsed="8.001715"/>
+</kw>
+<arg>${Input_Virtual_Chat_Agent}</arg>
+<status status="PASS" start="2025-11-06T12:15:51.466876" elapsed="16.779401"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:08.350447" level="INFO">Current page contains text 'Welcome. Please wait while we connect with an agent.'.</msg>
+<arg>${verification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.247714" elapsed="0.103086"/>
+</kw>
+<kw name="Check Text On ChatPage" owner="Customer_To_Agent_Chat">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${x_path}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.355115" elapsed="0.061613"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:08.497045" level="INFO">${page_text} = Roy added to the chat</msg>
+<var>${page_text}</var>
+<arg>xpath=${x_path}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.418163" elapsed="0.079122"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Page Text Extracted: ${page_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.499429" elapsed="0.001117"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${page_text}</arg>
+<arg>${exp_text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.502546" elapsed="0.000814"/>
+</kw>
+<msg time="2025-11-06T12:16:08.504346" level="INFO">${page_contains} = True</msg>
+<var>${page_contains}</var>
+<arg>Should Contain</arg>
+<arg>${page_text}</arg>
+<arg>${exp_text}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.501633" elapsed="0.002881"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Does the page contain expected text? ${page_contains}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.506500" elapsed="0.000964"/>
+</kw>
+<if>
+<branch type="IF" condition="'${page_contains}'=='False'">
+<kw name="Fail" owner="BuiltIn">
+<arg>Expected text: ${exp_text} not found in the page text: ${page_text}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-11-06T12:16:08.509513" elapsed="0.000282"/>
+</kw>
+<status status="NOT RUN" start="2025-11-06T12:16:08.508373" elapsed="0.001965"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Expected text: ${exp_text} found in the page text: ${page_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.511606" elapsed="0.000893"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:16:08.510893" elapsed="0.002179"/>
+</branch>
+<status status="PASS" start="2025-11-06T12:16:08.508246" elapsed="0.005308"/>
+</if>
+<arg>${expected_text}</arg>
+<arg>${start_chat_text_path}</arg>
+<status status="PASS" start="2025-11-06T12:16:08.352940" elapsed="0.160893"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:15:51.461014" elapsed="17.053426"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.517120" elapsed="0.098309"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:08.618776" level="INFO">Clicking element '//button[normalize-space(.)='Raise a complaint']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.617400" elapsed="0.261666"/>
+</kw>
+<arg>${btn_complaint}</arg>
+<status status="PASS" start="2025-11-06T12:16:08.515459" elapsed="0.365474"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:08.885438" elapsed="0.338528"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:09.226210" level="INFO">Clicking element '//button[normalize-space(.)='My order status shows delivered but I did not receive it']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:09.225361" elapsed="0.202008"/>
+</kw>
+<arg>${order_status_complaint}</arg>
+<status status="PASS" start="2025-11-06T12:16:08.883058" elapsed="0.546573"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:09.433479" elapsed="1.129918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:10.564912" level="INFO">Clicking element '//button[normalize-space(.)= 'No']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:10.564298" elapsed="0.106781"/>
+</kw>
+<arg>${btn_no}</arg>
+<status status="PASS" start="2025-11-06T12:16:09.431363" elapsed="1.240667"/>
+</kw>
+<kw name="Verify chat ended" owner="Customer_To_Agent_Chat">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${chat_session_end}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:10.673859" elapsed="0.891979"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:16:10.672800" elapsed="0.893423"/>
+</kw>
+<kw name="End Chat from Customer Side" owner="Customer_To_Agent_Chat">
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>${AGENT_BROWSERS}[${browser_index}]</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" start="2025-11-06T12:16:11.567637" elapsed="0.000489"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:11.568579" elapsed="0.007919"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[@id="dvc-chat-header-exit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:11.577204" elapsed="0.036742"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:11.614948" level="INFO">Clicking element '//span[@id="dvc-chat-header-exit"]'.</msg>
+<arg>//span[@id="dvc-chat-header-exit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:11.614538" elapsed="0.251411"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T12:16:15.867888" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T12:16:11.867027" elapsed="4.001209"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[text()="Submit"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:15.870205" elapsed="0.063625"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:15.935907" level="INFO">Clicking element '//span[text()="Submit"]'.</msg>
+<arg>//span[text()="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:15.935076" elapsed="0.229141"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T12:16:18.166956" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T12:16:16.166039" elapsed="2.001264"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2025-11-06T12:16:11.566803" elapsed="6.602216"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:15:51.460098" elapsed="26.709866"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-06T12:16:18.172067" elapsed="0.253296"/>
+</kw>
+<doc>This test case is to initiate a chat from the customer side to virtual agent for homeal and raise a complaint regarding order not received</doc>
+<tag>18</tag>
+<tag>CVACHAT_18</tag>
+<tag>homeal</tag>
+<tag>new</tag>
+<status status="PASS" start="2025-11-06T12:15:51.455475" elapsed="26.970278"/>
+</test>
+<test id="s1-t2" name="Initiate customer chat for homeal and raise a complaint regarding paid but order not placed" line="99">
+<kw name="Initiate customer chat for homeal and raise a complaint regarding paid but order not placed" owner="Customer_To_Agent_Chat">
+<kw name="start homeal chat" owner="Customer_To_Agent_Chat">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-06T12:16:18.578363" level="INFO">${AGENT_BROWSERS} = []</msg>
+<var>${AGENT_BROWSERS}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-06T12:16:18.578045" elapsed="0.000383"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:16:18.579572" level="INFO">${AGENT_BROWSERS} = []</msg>
+<arg>${AGENT_BROWSERS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:16:18.579164" elapsed="0.000528"/>
+</kw>
+<kw name="Initiate customer chat" owner="Customer_To_Agent_Chat">
+<kw name="Start TestCase" owner="common_login">
+<kw name="options_prop" owner="importfile">
+<msg time="2025-11-06T12:16:18.582740" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2025-11-06T12:16:18.690752" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:16:18.812808" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:16:18.984836" level="INFO">Driver [/home/rohitbansal/.wdm/drivers/chromedriver/linux64/142.0.7444.61/chromedriver-linux64/chromedriver] found in cache</msg>
+<msg time="2025-11-06T12:16:18.985421" level="INFO">${opt} = &lt;selenium.webdriver.chrome.options.Options object at 0x7c0dad24a3c0&gt;</msg>
+<msg time="2025-11-06T12:16:18.985578" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x7c0dad24a8d0&gt;</msg>
+<var>${opt}</var>
+<var>${service}</var>
+<status status="PASS" start="2025-11-06T12:16:18.582313" elapsed="0.403369"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:18.989454" level="INFO">Opening browser 'Chrome' to base url 'https://dev.sample-server.nouveau-labs.in/'.</msg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T12:16:18.988337" elapsed="2.421598"/>
+</kw>
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<arg>ELSE IF</arg>
+<arg>'${BROWSER}'=='edge'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--use-fake-ui-for-media-stream");add_argument("--use-fake-device-for-media-stream")</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=set_preference("media.navigator.permission.disabled", True)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-06T12:16:18.986940" elapsed="2.423976"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.411848" elapsed="0.313367"/>
+</kw>
+<arg>${Customer_URL}</arg>
+<status status="PASS" start="2025-11-06T12:16:18.581640" elapsed="3.144944"/>
+</kw>
+<kw name="Get Browser Ids" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:21.729979" level="INFO">${Customer_browsers} = [1]</msg>
+<var>${Customer_browsers}</var>
+<doc>Returns index of all active browser as list.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.728332" elapsed="0.001872"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Browsers: ${Customer_browsers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.732654" elapsed="0.000850"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:16:21.735157" level="INFO">${C_Browser1} = 1</msg>
+<var>${C_Browser1}</var>
+<arg>${Customer_browsers}[-1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.734442" elapsed="0.000828"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:16:21.737601" level="INFO">${C_Browser1} = 1</msg>
+<arg>${C_Browser1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.736761" elapsed="0.001045"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Customer Browser ID: ${C_Browser1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.742210" elapsed="0.000925"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${AGENT_BROWSERS}</arg>
+<arg>${C_Browser1}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.744437" elapsed="0.001174"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.747006" elapsed="0.011773"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:21.761034" level="INFO">Clicking element '//input[@id="sample-app-server-dropdown"]'.</msg>
+<arg>${Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:21.760164" elapsed="0.340170"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Enter_Server_URL}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:22.101329" elapsed="0.296004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:22.399593" level="INFO">Typing text 'https://callsphere.evolvecx.nouveau-labs.in' into text field '//input[@id="sample-app-server-input-box"]'.</msg>
+<arg>${Enter_Server_URL}</arg>
+<arg>${Input_Server_URL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:22.398554" elapsed="0.554408"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:22.955230" level="INFO">Clicking element '//button[@id="sample-app-server-add-button"]'.</msg>
+<arg>${Add_Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:22.954469" elapsed="0.154249"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:23.111405" level="INFO">Clicking element '//input[@id="sample-app-chat-virtual-agent-dropdown"]'.</msg>
+<arg>${Virtual_chat_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:23.110349" elapsed="0.153592"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Virtual_chat_box_input}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:23.264903" elapsed="0.300916"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:23.568170" level="INFO">Typing text 'homeal@support.com' into text field '//input[@id="sample-app-chat-virtual-agent-input-box"]'.</msg>
+<arg>${Virtual_chat_box_input}</arg>
+<arg>${chat_agent}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:23.567160" elapsed="0.363856"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:23.933871" level="INFO">Clicking element '//button[@id="sample-app-chat-virtual-agent-add-button"]'.</msg>
+<arg>${Add_Virtual_Chat_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:23.932822" elapsed="0.283058"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:24.221014" level="INFO">Clicking element '//button[@id="sample-app-chat-button"]'.</msg>
+<arg>${Initiate_chat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:24.219386" elapsed="0.428321"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Full_name}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:24.648835" elapsed="0.109575"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:24.759445" level="INFO">Typing text 'DolphinCX Customer' into text field '//input[@id="full_name"]'.</msg>
+<arg>${Full_name}</arg>
+<arg>${Customer_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:24.758998" elapsed="0.381592"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:25.143131" level="INFO">Typing text 'dolphincx@cus.com' into text field '//input[@id="email"]'.</msg>
+<arg>${Customer_mail_add}</arg>
+<arg>${Customer_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:25.142133" elapsed="0.310343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:25.454584" level="INFO">Typing text '9944776655' into text field '//input[@placeholder="Mobile Number"]'.</msg>
+<arg>${Mobile_number}</arg>
+<arg>${globalp_cust_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:25.453841" elapsed="0.268567"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:25.724239" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<arg>${Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:25.723733" elapsed="0.222988"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:25.948845" level="INFO">Typing text '6' into text field '//input[@aria-label="Please enter OTP character 1"]'.</msg>
+<arg>${otp_1}</arg>
+<arg>6</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:25.948159" elapsed="0.167430"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:26.117493" level="INFO">Typing text '3' into text field '//input[@aria-label="Please enter OTP character 2"]'.</msg>
+<arg>${otp_2}</arg>
+<arg>3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:26.116835" elapsed="0.207063"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:26.327811" level="INFO">Typing text '7' into text field '//input[@aria-label="Please enter OTP character 3"]'.</msg>
+<arg>${otp_3}</arg>
+<arg>7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:26.326547" elapsed="0.290194"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:26.624151" level="INFO">Typing text '9' into text field '//input[@aria-label="Please enter OTP character 4"]'.</msg>
+<arg>${otp_4}</arg>
+<arg>9</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:26.620900" elapsed="0.326662"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T12:16:34.949622" level="INFO">Slept 8 seconds.</msg>
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T12:16:26.948874" elapsed="8.001130"/>
+</kw>
+<arg>${Input_Virtual_Chat_Agent}</arg>
+<status status="PASS" start="2025-11-06T12:16:18.580771" elapsed="16.371041"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:35.056890" level="INFO">Current page contains text 'Welcome. Please wait while we connect with an agent.'.</msg>
+<arg>${verification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-06T12:16:34.953328" elapsed="0.103879"/>
+</kw>
+<kw name="Check Text On ChatPage" owner="Customer_To_Agent_Chat">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${x_path}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.061274" elapsed="0.066531"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:35.178872" level="INFO">${page_text} = Nisha added to the chat</msg>
+<var>${page_text}</var>
+<arg>xpath=${x_path}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.129017" elapsed="0.049948"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Page Text Extracted: ${page_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.179944" elapsed="0.000508"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${page_text}</arg>
+<arg>${exp_text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.181469" elapsed="0.000429"/>
+</kw>
+<msg time="2025-11-06T12:16:35.182318" level="INFO">${page_contains} = True</msg>
+<var>${page_contains}</var>
+<arg>Should Contain</arg>
+<arg>${page_text}</arg>
+<arg>${exp_text}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.181031" elapsed="0.001366"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Does the page contain expected text? ${page_contains}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.183206" elapsed="0.000408"/>
+</kw>
+<if>
+<branch type="IF" condition="'${page_contains}'=='False'">
+<kw name="Fail" owner="BuiltIn">
+<arg>Expected text: ${exp_text} not found in the page text: ${page_text}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-11-06T12:16:35.184725" elapsed="0.000176"/>
+</kw>
+<status status="NOT RUN" start="2025-11-06T12:16:35.184076" elapsed="0.001133"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Expected text: ${exp_text} found in the page text: ${page_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.185960" elapsed="0.000495"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:16:35.185466" elapsed="0.001297"/>
+</branch>
+<status status="PASS" start="2025-11-06T12:16:35.184017" elapsed="0.003028"/>
+</if>
+<arg>${expected_text}</arg>
+<arg>${start_chat_text_path}</arg>
+<status status="PASS" start="2025-11-06T12:16:35.059419" elapsed="0.127764"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:16:18.577439" elapsed="16.610061"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.188862" elapsed="0.031765"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:35.221781" level="INFO">Clicking element '//button[normalize-space(.)='Raise a complaint']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.221311" elapsed="0.122799"/>
+</kw>
+<arg>${btn_complaint}</arg>
+<status status="PASS" start="2025-11-06T12:16:35.188037" elapsed="0.156750"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.346709" elapsed="0.298447"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:35.647550" level="INFO">Clicking element '//button[normalize-space(.)='My payment was deducted but the order was not placed']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.646496" elapsed="0.115906"/>
+</kw>
+<arg>${paid_but_order_not_placed_complaint}</arg>
+<status status="PASS" start="2025-11-06T12:16:35.345595" elapsed="0.417542"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:35.764671" elapsed="1.127789"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:36.893456" level="INFO">Clicking element '//button[normalize-space(.)= 'No']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:36.893051" elapsed="0.100041"/>
+</kw>
+<arg>${btn_no}</arg>
+<status status="PASS" start="2025-11-06T12:16:35.763749" elapsed="1.230017"/>
+</kw>
+<kw name="Verify chat ended" owner="Customer_To_Agent_Chat">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${chat_session_end}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:36.995014" elapsed="0.900383"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:16:36.994280" elapsed="0.901513"/>
+</kw>
+<kw name="End Chat from Customer Side" owner="Customer_To_Agent_Chat">
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>${AGENT_BROWSERS}[${browser_index}]</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" start="2025-11-06T12:16:37.897055" elapsed="0.000451"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:37.897960" elapsed="0.006304"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[@id="dvc-chat-header-exit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:37.904946" elapsed="0.029500"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:37.936030" level="INFO">Clicking element '//span[@id="dvc-chat-header-exit"]'.</msg>
+<arg>//span[@id="dvc-chat-header-exit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:37.935469" elapsed="0.271706"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T12:16:42.210065" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T12:16:38.208865" elapsed="4.001619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[text()="Submit"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:42.212791" elapsed="0.061414"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:42.276234" level="INFO">Clicking element '//span[text()="Submit"]'.</msg>
+<arg>//span[text()="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:42.275430" elapsed="0.225820"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T12:16:44.504552" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T12:16:42.503405" elapsed="2.001590"/>
+</kw>
+<arg>0</arg>
+<status status="PASS" start="2025-11-06T12:16:37.896340" elapsed="6.610507"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:16:18.576760" elapsed="25.931445"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-06T12:16:44.510310" elapsed="0.155529"/>
+</kw>
+<doc>This test case is to initiate a chat from the customer side to virtual agent for homeal and raise a complaint regarding paid but order not placed</doc>
+<tag>19</tag>
+<tag>CVACHAT_19</tag>
+<tag>homeal</tag>
+<tag>new</tag>
+<status status="PASS" start="2025-11-06T12:16:18.575366" elapsed="26.091578"/>
+</test>
+<test id="s1-t3" name="Initiate customer chat for homeal and raise a complaint regarding subscription issue" line="104">
+<kw name="Initiate customer chat for homeal and raise a complaint regarding subscription issue" owner="Customer_To_Agent_Chat">
+<kw name="start homeal chat" owner="Customer_To_Agent_Chat">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-06T12:16:44.889964" level="INFO">${AGENT_BROWSERS} = []</msg>
+<var>${AGENT_BROWSERS}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-06T12:16:44.889632" elapsed="0.000397"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:16:44.891193" level="INFO">${AGENT_BROWSERS} = []</msg>
+<arg>${AGENT_BROWSERS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:16:44.890785" elapsed="0.000511"/>
+</kw>
+<kw name="Initiate customer chat" owner="Customer_To_Agent_Chat">
+<kw name="Start TestCase" owner="common_login">
+<kw name="options_prop" owner="importfile">
+<msg time="2025-11-06T12:16:44.894351" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2025-11-06T12:16:45.047134" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:16:45.195208" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-11-06T12:16:45.326590" level="INFO">Driver [/home/rohitbansal/.wdm/drivers/chromedriver/linux64/142.0.7444.61/chromedriver-linux64/chromedriver] found in cache</msg>
+<msg time="2025-11-06T12:16:45.327163" level="INFO">${opt} = &lt;selenium.webdriver.chrome.options.Options object at 0x7c0daa6f3b30&gt;</msg>
+<msg time="2025-11-06T12:16:45.327312" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x7c0daa683590&gt;</msg>
+<var>${opt}</var>
+<var>${service}</var>
+<status status="PASS" start="2025-11-06T12:16:44.893963" elapsed="0.433432"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:45.330940" level="INFO">Opening browser 'Chrome' to base url 'https://dev.sample-server.nouveau-labs.in/'.</msg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-06T12:16:45.330105" elapsed="2.789999"/>
+</kw>
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${opt}</arg>
+<arg>service=${service}</arg>
+<arg>ELSE IF</arg>
+<arg>'${BROWSER}'=='edge'</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--use-fake-ui-for-media-stream");add_argument("--use-fake-device-for-media-stream")</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${LOGIN_URL1}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=set_preference("media.navigator.permission.disabled", True)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-06T12:16:45.328827" elapsed="2.792265"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.121907" elapsed="0.218362"/>
+</kw>
+<arg>${Customer_URL}</arg>
+<status status="PASS" start="2025-11-06T12:16:44.893220" elapsed="3.447645"/>
+</kw>
+<kw name="Get Browser Ids" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:48.342307" level="INFO">${Customer_browsers} = [1]</msg>
+<var>${Customer_browsers}</var>
+<doc>Returns index of all active browser as list.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.341714" elapsed="0.000700"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Browsers: ${Customer_browsers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.343679" elapsed="0.000657"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:16:48.345912" level="INFO">${C_Browser1} = 1</msg>
+<var>${C_Browser1}</var>
+<arg>${Customer_browsers}[-1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.345223" elapsed="0.000791"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-11-06T12:16:48.347970" level="INFO">${C_Browser1} = 1</msg>
+<arg>${C_Browser1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.347263" elapsed="0.000873"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Customer Browser ID: ${C_Browser1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.351143" elapsed="0.000901"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${AGENT_BROWSERS}</arg>
+<arg>${C_Browser1}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.352996" elapsed="0.001767"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.355705" elapsed="0.010456"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:48.367937" level="INFO">Clicking element '//input[@id="sample-app-server-dropdown"]'.</msg>
+<arg>${Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.367150" elapsed="0.395642"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Enter_Server_URL}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:48.764953" elapsed="0.326088"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:49.093074" level="INFO">Typing text 'https://callsphere.evolvecx.nouveau-labs.in' into text field '//input[@id="sample-app-server-input-box"]'.</msg>
+<arg>${Enter_Server_URL}</arg>
+<arg>${Input_Server_URL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:49.092173" elapsed="0.423949"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:49.518496" level="INFO">Clicking element '//button[@id="sample-app-server-add-button"]'.</msg>
+<arg>${Add_Server_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:49.517804" elapsed="0.159901"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:49.679602" level="INFO">Clicking element '//input[@id="sample-app-chat-virtual-agent-dropdown"]'.</msg>
+<arg>${Virtual_chat_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:49.679061" elapsed="0.197091"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Virtual_chat_box_input}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:49.878286" elapsed="0.312273"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:50.192825" level="INFO">Typing text 'homeal@support.com' into text field '//input[@id="sample-app-chat-virtual-agent-input-box"]'.</msg>
+<arg>${Virtual_chat_box_input}</arg>
+<arg>${chat_agent}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:50.191833" elapsed="0.289764"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:50.484933" level="INFO">Clicking element '//button[@id="sample-app-chat-virtual-agent-add-button"]'.</msg>
+<arg>${Add_Virtual_Chat_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:50.483315" elapsed="0.158922"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:50.644965" level="INFO">Clicking element '//button[@id="sample-app-chat-button"]'.</msg>
+<arg>${Initiate_chat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:50.644106" elapsed="0.430909"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Full_name}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:16:51.076365" elapsed="0.103372"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:51.181238" level="INFO">Typing text 'DolphinCX Customer' into text field '//input[@id="full_name"]'.</msg>
+<arg>${Full_name}</arg>
+<arg>${Customer_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:51.180602" elapsed="0.363383"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:51.545596" level="INFO">Typing text 'dolphincx@cus.com' into text field '//input[@id="email"]'.</msg>
+<arg>${Customer_mail_add}</arg>
+<arg>${Customer_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:51.545042" elapsed="0.319927"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:51.867392" level="INFO">Typing text '9944776655' into text field '//input[@placeholder="Mobile Number"]'.</msg>
+<arg>${Mobile_number}</arg>
+<arg>${globalp_cust_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:51.865972" elapsed="0.291943"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:52.159745" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<arg>${Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:52.159029" elapsed="0.233830"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:52.395426" level="INFO">Typing text '6' into text field '//input[@aria-label="Please enter OTP character 1"]'.</msg>
+<arg>${otp_1}</arg>
+<arg>6</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:52.394736" elapsed="0.152022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:52.548848" level="INFO">Typing text '3' into text field '//input[@aria-label="Please enter OTP character 2"]'.</msg>
+<arg>${otp_2}</arg>
+<arg>3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:52.548087" elapsed="0.144926"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:52.694785" level="INFO">Typing text '7' into text field '//input[@aria-label="Please enter OTP character 3"]'.</msg>
+<arg>${otp_3}</arg>
+<arg>7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:52.694192" elapsed="0.162252"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:16:52.858862" level="INFO">Typing text '9' into text field '//input[@aria-label="Please enter OTP character 4"]'.</msg>
+<arg>${otp_4}</arg>
+<arg>9</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:16:52.858025" elapsed="0.235018"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T12:17:01.095700" level="INFO">Slept 8 seconds.</msg>
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T12:16:53.094586" elapsed="8.001548"/>
+</kw>
+<arg>${Input_Virtual_Chat_Agent}</arg>
+<status status="PASS" start="2025-11-06T12:16:44.892369" elapsed="16.205657"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:01.201686" level="INFO">Current page contains text 'Welcome. Please wait while we connect with an agent.'.</msg>
+<arg>${verification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.100037" elapsed="0.102126"/>
+</kw>
+<kw name="Check Text On ChatPage" owner="Customer_To_Agent_Chat">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${x_path}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.207591" elapsed="0.058107"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:01.349467" level="INFO">${page_text} = Reena added to the chat</msg>
+<var>${page_text}</var>
+<arg>xpath=${x_path}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.266910" elapsed="0.082820"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Page Text Extracted: ${page_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.352149" elapsed="0.001191"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${page_text}</arg>
+<arg>${exp_text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.355580" elapsed="0.000918"/>
+</kw>
+<msg time="2025-11-06T12:17:01.357359" level="INFO">${page_contains} = True</msg>
+<var>${page_contains}</var>
+<arg>Should Contain</arg>
+<arg>${page_text}</arg>
+<arg>${exp_text}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.354558" elapsed="0.002947"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Does the page contain expected text? ${page_contains}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.359634" elapsed="0.001128"/>
+</kw>
+<if>
+<branch type="IF" condition="'${page_contains}'=='False'">
+<kw name="Fail" owner="BuiltIn">
+<arg>Expected text: ${exp_text} not found in the page text: ${page_text}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-11-06T12:17:01.362786" elapsed="0.000538"/>
+</kw>
+<status status="NOT RUN" start="2025-11-06T12:17:01.361571" elapsed="0.002653"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Expected text: ${exp_text} found in the page text: ${page_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.366085" elapsed="0.001111"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:17:01.364981" elapsed="0.002867"/>
+</branch>
+<status status="PASS" start="2025-11-06T12:17:01.361454" elapsed="0.006928"/>
+</if>
+<arg>${expected_text}</arg>
+<arg>${start_chat_text_path}</arg>
+<status status="PASS" start="2025-11-06T12:17:01.205025" elapsed="0.163656"/>
+</kw>
+<status status="PASS" start="2025-11-06T12:16:44.889053" elapsed="16.480371"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.372791" elapsed="0.059584"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:01.434784" level="INFO">Clicking element '//button[normalize-space(.)='Raise a complaint']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.433907" elapsed="0.277061"/>
+</kw>
+<arg>${btn_complaint}</arg>
+<status status="PASS" start="2025-11-06T12:17:01.370766" elapsed="0.342767"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:17:01.721113" elapsed="0.352722"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:02.074904" level="INFO">Clicking element '//button[normalize-space(.)='I am facing issue with my subscription']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:17:02.074458" elapsed="0.209556"/>
+</kw>
+<arg>${subscripttion_complaint}</arg>
+<status status="PASS" start="2025-11-06T12:17:01.716395" elapsed="0.569179"/>
+</kw>
+<kw name="Wait and Click Element" owner="Customer_Recent_Chats">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:17:02.289000" elapsed="2.452525"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:04.742515" level="INFO">Clicking element '//button[normalize-space(.)='Subscription - Lunch']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:17:04.742117" elapsed="0.146517"/>
+</kw>
+<arg>${lunch_sub}</arg>
+<status status="PASS" start="2025-11-06T12:17:02.286874" elapsed="2.603260"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${sub_issue_describe}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:17:04.891497" elapsed="0.884794"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:05.777333" level="INFO">Typing text 'Food is not good' into text field '//textarea[@id="dvc-chat-message-input-box"]'.</msg>
+<arg>${text_box_customer}</arg>
+<arg>Food is not good</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-06T12:17:05.776900" elapsed="0.414740"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${send_msg_button_customer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-06T12:17:06.192806" elapsed="0.049630"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:06.243773" level="INFO">Sending key(s) ('RETURN',) to //*[name()='svg' and @id="dvc-chat-message-send-button"] element.</msg>
+<msg time="2025-11-06T12:17:06.658219" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-11-06T12:17:06.658419" level="INFO">Releasing special key RETURN.</msg>
+<arg>${send_msg_button_customer}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-11-06T12:17:06.243076" elapsed="0.459899"/>
+</kw>
+<kw name="Verify chat ended" owner="Customer_To_Agent_Chat">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-11-06T12:17:17.101054" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-06T12:17:17.101508" level="FAIL">Element '//div[text()="Chat session has ended!"]' not visible after 10 seconds.</msg>
+<arg>${chat_session_end}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-06T12:17:06.704911" elapsed="10.398329">Element '//div[text()="Chat session has ended!"]' not visible after 10 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-11-06T12:17:06.703965" elapsed="10.400060">Element '//div[text()="Chat session has ended!"]' not visible after 10 seconds.</status>
+</kw>
+<kw name="End Chat from Customer Side" owner="Customer_To_Agent_Chat">
+<arg>0</arg>
+<status status="NOT RUN" start="2025-11-06T12:17:17.104696" elapsed="0.000139"/>
+</kw>
+<status status="FAIL" start="2025-11-06T12:16:44.888340" elapsed="32.216847">Element '//div[text()="Chat session has ended!"]' not visible after 10 seconds.</status>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-06T12:17:17.105822" elapsed="0.089663"/>
+</kw>
+<doc>This test case is to initiate a chat from the customer side to virtual agent for homeal and raise a complaint regarding subscription issue</doc>
+<tag>20</tag>
+<tag>CVACHAT_20</tag>
+<tag>homeal</tag>
+<tag>new</tag>
+<status status="FAIL" start="2025-11-06T12:16:44.887180" elapsed="32.309172">Element '//div[text()="Chat session has ended!"]' not visible after 10 seconds.</status>
+</test>
+<status status="FAIL" start="2025-11-06T12:15:49.128720" elapsed="88.232188"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">18</stat>
+<stat pass="1" fail="0" skip="0">19</stat>
+<stat pass="0" fail="1" skip="0">20</stat>
+<stat pass="1" fail="0" skip="0">CVACHAT_18</stat>
+<stat pass="1" fail="0" skip="0">CVACHAT_19</stat>
+<stat pass="0" fail="1" skip="0">CVACHAT_20</stat>
+<stat pass="2" fail="1" skip="0">homeal</stat>
+<stat pass="2" fail="1" skip="0">new</stat>
+</tag>
+<suite>
+<stat name="37.Customer chat" id="s1" pass="2" fail="1" skip="0">37.Customer chat</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

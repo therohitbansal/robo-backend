@@ -1,0 +1,30 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Roy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Roy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+37.Customer chat                                                      | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/5/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/5/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/5/report.html

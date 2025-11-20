@@ -1,0 +1,48 @@
+==============================================================================
+37.Customer chat                                                              
+==============================================================================
+Initite customer chat for homeal and raise a complaint regarding o... Current Browsers: [1]
+Current Customer Browser ID: 1
+| FAIL |
+ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=142.0.7444.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+#0 0x5cc2f028aaca <unknown>
+#1 0x5cc2efcd6b08 <unknown>
+#2 0x5cc2efd2a91e <unknown>
+#3 0x5cc2efd1da0b <unknown>
+#4 0x5cc2efd1d387 <unknown>
+#5 0x5cc2efd75c87 <unknown>
+#6 0x5cc2efd1baca <unknown>
+#7 0x5cc2efd1c7d1 <unknown>
+#8 0x5cc2f0251a99 <unknown>
+#9 0x5cc2f0254a6c <unknown>
+#10 0x5cc2f023ad29 <unknown>
+#11 0x5cc2f0255665 <unknown>
+#12 0x5cc2f02226a3 <unknown>
+#13 0x5cc2f02777b8 <unknown>
+#14 0x5cc2f0277993 <unknown>
+#15 0x5cc2f0289a63 <unknown>
+#16 0x70d47629caa4 <unknown>
+#17 0x70d476329c6c <unknown>
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Nisha added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Nisha added to the chat
+| PASS |
+------------------------------------------------------------------------------
+Initiate customer chat for homeal and raise a complaint regarding ... Current Browsers: [1]
+Current Customer Browser ID: 1
+Page Text Extracted: Joy added to the chat
+Does the page contain expected text? True
+Expected text: added to the chat found in the page text: Joy added to the chat
+| PASS |
+------------------------------------------------------------------------------
+37.Customer chat                                                      | FAIL |
+3 tests, 2 passed, 1 failed
+==============================================================================
+Output:  /home/rohitbansal/temp_cur/backend/data/robot_runs/11/output.xml
+Log:     /home/rohitbansal/temp_cur/backend/data/robot_runs/11/log.html
+Report:  /home/rohitbansal/temp_cur/backend/data/robot_runs/11/report.html
